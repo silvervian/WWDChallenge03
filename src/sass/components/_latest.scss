@@ -1,0 +1,44 @@
+.latest {
+
+  &__desc {
+    max-width: 45rem;
+    padding-bottom: 2rem;
+  }
+  &-box {
+    display: flex;
+    // flex-wrap: wrap;
+    margin: 2rem 0;
+
+   
+    // display: flex;
+
+    &__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1rem;
+      width: 6.6rem;
+      height: 6.6rem;
+      border-radius: 3.3rem;
+      border: 3px solid #000000;
+    }
+
+    &__icon {
+      width: 50%;
+    }
+
+    &__title {
+
+    }
+
+    &__desc {
+
+    }
+
+  }
+
+  &__link {
+    color: #7cc576!important;
+    font-weight: 700;
+  }
+}

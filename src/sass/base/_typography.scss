@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Roboto+Slab:400,700');
+
 body {
-  font-family: "Montserrat";
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
   line-height: 1.7;
   font-weight: 400;
@@ -10,6 +12,11 @@ body {
   font-size: 6rem;
   letter-spacing: -3px;
   line-height: 6.5rem;
+  color: #fff;
+
+  &--center {
+    text-align: center;
+  }
 }
 
 .secondary {
@@ -17,13 +24,36 @@ body {
   letter-spacing: -2px;
   font-weight: bold;
   color: #222222;
+
+  &--light {
+    color: #fff;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  > span {
+    color: #7cc576;
+  }
 }
 
 .tertiary {
   font-size: 1.8rem;
+  color: #222222;
+  font-weight: 700;
+
+  &--center {
+    text-align: center;
+  }
 }
 
 .subtitle {
   font-family: "Roboto Slab";
   font-size: 2rem;
+  text-align: center;
+
+  &--light {
+    color: #cccccc;
+  }
 }
