@@ -77,11 +77,20 @@ gulp.task('image', () => {
         progressive: true,
       }),
       imagemin.optipng({
-        optimizationLevel: 3,
+        optimizationLevel: 5,
       }),
       imagemin.svgo({
         plugins: [{
           removeViewBox: false,
+        },
+        {
+          convertPathData: false,
+        },
+        {
+          removeUnknownsAndDefaults: false,
+        },
+        {
+          convertShapeToPath: false,
         },
         {
           cleanupIDs: false,

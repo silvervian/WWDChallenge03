@@ -3,7 +3,9 @@
   align-items: center;
 
   &__img {
-    background: #7cc576 url(../../img/leaf.png) no-repeat center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 2.8rem;
     height: 2.8rem;
     margin: .5em;
