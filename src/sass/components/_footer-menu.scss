@@ -1,0 +1,32 @@
+.footer-menu {
+  margin: 0 auto;
+  padding: 4rem 0;
+  display: flex;
+  max-width: 100rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  &__box {
+    max-width: 30rem;
+    min-width: 25rem;
+    margin: 2rem 1rem;
+  }
+
+  &__list {
+    margin-top: 2rem; 
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-gap: 1rem;
+  }
+
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__link {
+    font-family: "Roboto Slab";
+    font-size: 1.6rem;
+    color: #ececec!important;
+  }
+}

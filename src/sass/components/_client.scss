@@ -1,0 +1,55 @@
+.client {
+  padding: 4rem 1rem;
+  margin: 0 auto;
+  display: flex;
+  max-width: 100rem;
+
+  @include media(small) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__reverse {
+    flex-direction: row-reverse;
+  }
+
+  &__img {
+    min-width: 22rem;
+    max-width: 22rem;
+    height: 22rem;
+    border-radius: 11rem;
+    border: 3px solid #ffffff;
+    overflow: hidden;
+  }
+  
+  &__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  &__desc {
+    clip-path: polygon(3% 0px, 100% 0px, 100% 100%, 3% 100%, 3% 65%, 0px 50%, 3% 35%);
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    max-width: 64rem;
+    background:#f9f9f9;
+
+    &--reverse {
+      clip-path: polygon(0% 100%, 97% 100%, 97% 65%, 100% 50%, 97% 35%, 97% 0px, 0% 0%);
+    }
+  }
+  
+  &__highlighted {
+    color: #7cc576;
+  }
+}
+
+.test {
+  object-fit: cover;
+}
