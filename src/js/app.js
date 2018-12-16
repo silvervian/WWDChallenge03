@@ -1,4 +1,4 @@
-
+import AOS from 'aos';
 import goToTop from './goToTop';
 
 const hiddenMenu = document.querySelector('.menu-mobile');
@@ -6,6 +6,7 @@ const checkBox = document.querySelector('.hamburger__checkbox');
 const menuMobileList = document.querySelectorAll('.menu-mobile li');
 
 goToTop();
+AOS.init();
 
 checkBox.addEventListener('change', () => {
   if (checkBox.checked === true) {
