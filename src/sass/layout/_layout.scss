@@ -35,6 +35,7 @@
 .section-services {
   max-width: 100rem;
   margin: 8rem auto;
+  overflow: hidden;
 }
 
 .section-relax {
@@ -53,6 +54,7 @@
 .section-latest {
   background: url(../../img/tablet.png) no-repeat 100% 100%;
   padding: 7rem 0;
+  overflow: hidden;
 
   @include media(large) {
     background: url(../../img/tablet.png) no-repeat 150% 100%;
@@ -77,6 +79,7 @@
   margin: 0 auto;
   padding: 7rem 0;
   background-color: #f9f9f9;
+  overflow: hidden;
 }
 
 .section-contact {
