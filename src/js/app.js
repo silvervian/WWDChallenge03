@@ -6,7 +6,9 @@ const checkBox = document.querySelector('.hamburger__checkbox');
 const menuMobileList = document.querySelectorAll('.menu-mobile li');
 
 goToTop();
-AOS.init();
+AOS.init({
+  once: true
+});
 
 checkBox.addEventListener('change', () => {
   if (checkBox.checked === true) {
