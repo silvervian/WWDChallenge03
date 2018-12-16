@@ -21,26 +21,26 @@ const config = {
       sass: ['./src/sass/main.scss'],
       js: [
         './src/js/lol.js',
-        './src/js/app.js',
-      ],
+        './src/js/app.js'
+      ]
     },
     dist: {
       main: './dist',
       css: './dist/css',
       js: './dist/js',
-      img: './dist/img',
-    },
-  },
+      img: './dist/img'
+    }
+  }
 };
 
 gulp.task('sass', () => gulp.src(config.paths.src.sass)
   .pipe(sourceMaps.init())
   .pipe(sass().on('error', sass.logError))
   .pipe(autoprefixer({
-    browsers: ['last 5 versions'],
+    browsers: ['last 5 versions']
   }))
   .pipe(clean({
-    rebaseTo: './css/',
+    rebaseTo: './css/'
   }))
   .pipe(sourceMaps.write())
   .pipe(gulp.dest(config.paths.dist.css))
@@ -70,47 +70,23 @@ gulp.task('image', () => {
   gulp.src(config.paths.src.img)
     .pipe(changed(config.paths.dist.img))
     .pipe(imagemin([
-      imagemin.gifsicle({
-        interlaced: true,
-      }),
-      imagemin.jpegtran({
-        progressive: true,
-      }),
-      imagemin.optipng({
-        optimizationLevel: 3,
-      }),
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.jpegtran({ progressive: true }),
+      imagemin.optipng({ optimizationLevel: 7 }),
       imagemin.svgo({
-        plugins: [{
-          removeViewBox: false,
-        },
-        {
-          convertPathData: false,
-        },
-        {
-          removeUnknownsAndDefaults: false,
-        },
-        {
-          convertShapeToPath: false,
-        },
-        {
-          cleanupIDs: false,
-        },
-        {
-          removeViewBox: false,
-        },
-        {
-          removeUselessStrokeAndFill: false,
-        },
-        {
-          removeEmptyAttrs: false,
-        },
-        ],
-      }),
-    ], {
-      verbose: true,
-    }))
+        plugins: [
+          { removeViewBox: false },
+          { convertPathData: false },
+          { removeUnknownsAndDefaults: false },
+          { convertShapeToPath: false },
+          { cleanupIDs: false },
+          { removeViewBox: false },
+          { removeUselessStrokeAndFill: false },
+          { removeEmptyAttrs: false }
+        ]
+      })
+    ], { verbose: true }))
     .pipe(gulp.dest(config.paths.dist.img));
-
   reload();
 });
 
@@ -123,7 +99,7 @@ gulp.task('build', ['clean'], () => {
 gulp.task('server', () => {
   sync.init({
     injectChanges: true,
-    server: config.paths.dist.main,
+    server: config.paths.dist.main
   });
 });
 

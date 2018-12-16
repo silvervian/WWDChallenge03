@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Roboto+Slab:400,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -14,6 +15,14 @@ body {
   line-height: 6.5rem;
   color: #fff;
 
+  @include media(small) {
+    font-size: 5rem;
+  }
+
+  &--animated {
+    animation: moveInLeft 1s ease-out;
+  }
+
   &--center {
     text-align: center;
   }
@@ -22,8 +31,13 @@ body {
 .secondary {
   font-size: 4rem;
   letter-spacing: -2px;
+  line-height: 4.5rem;
   font-weight: bold;
   color: #222222;
+
+  @include media(small) {
+    font-size: 3rem;
+  }
 
   &--light {
     color: #fff;
@@ -56,6 +70,10 @@ body {
   font-family: "Roboto Slab";
   font-size: 2rem;
   text-align: center;
+
+  &--animated {
+    animation: 1s moveInRight ease-out;
+  }
 
   &--light {
     color: #cccccc;

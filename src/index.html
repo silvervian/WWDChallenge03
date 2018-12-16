@@ -5,11 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gulp's Template</title>
+    <title>WWDChallenge03</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
+
+    <a href="#header" class="go-up"></a>
+
+    <ul class="menu-mobile">
+        <li class="nav__link menu-mobile__item"><a href="#header">HOME</a></li>
+        <li class="nav__link menu-mobile__item"><a href="#services">ABOUT</a></li>
+        <li class="nav__link menu-mobile__item"><a href="#relax">BLOG</a></li>
+        <li class="nav__link menu-mobile__item"><a href="#latest">PORTFOLIO</a></li>
+        <li class="nav__link menu-mobile__item"><a href="#contact">CONTACT</a></li>
+    </ul>
+
 
     <header id="header" class="header">
         <div class="container__header">
@@ -21,28 +32,37 @@
                 <span class="logo__name">TREEHOUSE</span>
             </a>
 
+            <div class="hamburger">
+                <input class="hamburger__checkbox" type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__link"><a href="#">HOME</a></li>
-                    <li class="nav__link"><a href="#">ABOUT</a></li>
-                    <li class="nav__link"><a href="#">BLOG</a></li>
-                    <li class="nav__link"><a href="#">PROTFOLIO</a></li>
-                    <li class="nav__link"><a href="#">CONTACT</a></li>
+                    <li class="nav__link"><a href="#header">HOME</a></li>
+                    <li class="nav__link"><a href="#services">ABOUT</a></li>
+                    <li class="nav__link"><a href="#relax">BLOG</a></li>
+                    <li class="nav__link"><a href="#latest">PORTFOLIO</a></li>
+                    <li class="nav__link"><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
 
         <section class="welcome-page">
-            <h1 class="primary primary--center">CREATIVE DIGITAL<br> SOLUTIONS</h1>
-            <p class="subtitle subtitle--light">Proin iaculis purus consequat sem cure. </p>
-            <div class="btn">VIEW PORTFOLIO</div>
+            <h1 class="primary primary--center primary--animated">CREATIVE DIGITAL<br> SOLUTIONS</h1>
+            <p class="subtitle subtitle--light subtitle--animated">Proin iaculis purus consequat sem cure. </p>
+            <a href="#latest">
+                <div class="btn btn--animated">VIEW PORTFOLIO</div>
+            </a>
         </section>
 
     </header>
 
     <main>
 
-        <section class="section-services">
+        <section id="services" class="section-services">
             <h2 class="secondary secondary--center">PROFESSIONAL SERVICES</h2>
             <p class="subtitle">Proin iaculis purus consequat sem cure </p>
             <div class="services-box">
@@ -76,16 +96,42 @@
             </div>
         </section>
 
-        <section class="section-relax">
+        <section id="relax" class="section-relax">
             <div class="gear"></div>
             <div class="relax">
                 <h2 class="secondary secondary--light">JUST RELAX <span>&</span><br>
                     LET US DO A HEAVT LIFTING</h2>
+                <p class="relax__desc">Proin iaculis purus consequat sem cure digni ssim. Donec
+                    porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
+                <div class="relax__list">
+                    <div class="relax__icon">
+                        <svg class="relax__svg">
+                            <use xlink:href="./img/sprite.svg#icon-checkmark"></use>
+                        </svg>
+                    </div>
+                    <p class="relax__item">Initial Setup & Customizations</p>
+                </div>
+                <div class="relax__list">
+                    <div class="relax__icon">
+                        <svg class="relax__svg">
+                            <use xlink:href="./img/sprite.svg#icon-checkmark"></use>
+                        </svg>
+                    </div>
+                    <p class="relax__item">Regular Updates</p>
+                </div>
+                <div class="relax__list">
+                    <div class="relax__icon">
+                        <svg class="relax__svg">
+                            <use xlink:href="./img/sprite.svg#icon-checkmark"></use>
+                        </svg>
+                    </div>
+                    <p class="relax__item">Round The Clock Support</p>
+                </div>
                 <div class="btn">LEARN MORE</div>
             </div>
         </section>
 
-        <section class="section-latest">
+        <section id="latest" class="section-latest">
             <h2 class="secondary secondary--center">LATEST PROJECT</h2>
             <p class="subtitle">Proin iaculis purus consequat sem cure </p>
             <div class="center">
@@ -195,8 +241,9 @@
             </div>
         </section>
 
-        <section class="section-contact">
-            <h2 class="secondary secondary--center secondary--light">RADY TO TALK ABOUT YOUR NEXT PROJECT?</h2>
+        <section id="contact" class="section-contact">
+            <h2 class="secondary secondary--center secondary--light">READY TO TALK ABOUT YOUR NEXT PROJECT?</h2>
+            <br>
             <div class="btn btn--contact">CONTACT US</div>
         </section>
 

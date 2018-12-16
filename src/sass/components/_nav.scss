@@ -12,4 +12,9 @@
     color: #555555;
     cursor: pointer;
   }
+
+  @include media(medium) {
+    display: none;
+    justify-content: space-around;
+  }
 }

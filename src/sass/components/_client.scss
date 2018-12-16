@@ -40,8 +40,16 @@
     max-width: 64rem;
     background:#f9f9f9;
 
+    @include media(small) {
+      clip-path: none;
+    }
+
     &--reverse {
       clip-path: polygon(0% 100%, 97% 100%, 97% 65%, 100% 50%, 97% 35%, 97% 0px, 0% 0%);
+
+      @include media(small) {
+        clip-path: none;
+      }
     }
   }
   

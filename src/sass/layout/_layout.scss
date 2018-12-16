@@ -5,6 +5,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media(medium) {
+      position: fixed;
+      top: -2rem;
+      left: 0;
+      padding: 1rem 0;
+      width: 100vw;
+      background: #fff;
+      z-index: 2;
+    }
   }
 }
 
@@ -15,6 +25,11 @@
   justify-content: space-evenly;
   align-items: center;
   height: 53rem;
+  padding-top: 3rem;
+
+  @include media(small) {
+    height: 80vh;
+  }
 }
 
 .section-services {
@@ -24,7 +39,6 @@
 
 .section-relax {
   display: flex;
-  height: 50rem;
 }
 
 .gear {
@@ -33,21 +47,6 @@
 
   @include media(small) {
     width: 0%;
-  }
-}
-
-.relax {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(../../img/bg2.png) no-repeat 60% 40% / cover;
-  width: 97%;
-  padding: 6rem 7rem; 
-
-  @include media(small) {
-    width: 100%;
-    padding: 6rem 2rem;
-    background: url(../../img/bg2.png) no-repeat 60% 80%;
   }
 }
 
