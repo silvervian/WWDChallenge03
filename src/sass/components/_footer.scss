@@ -20,6 +20,15 @@
       text-align: center;
       margin: 0 2rem;
     }
+
+    a {
+      color: inherit;
+      transition: .2s;
+
+      &:hover {
+        color: shade(#777, 70%);
+      }
+    }
   }
 
   &__box-icon {
